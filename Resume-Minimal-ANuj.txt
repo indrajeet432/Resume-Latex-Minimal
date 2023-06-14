@@ -1,0 +1,136 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[bottom=0.8in,top=0.8in, left=0.8in,right=0.8in]{geometry}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%%%%%%%%%%% pdflatex %%%%%%%%%
+\usepackage[T1]{fontenc}
+\usepackage{newtxmath,newtxtext}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%% xelatex %%%%%%%%%%%%%%
+% \usepackage{fontspec}
+% \setmainfont{Times New Roman}
+% \setmainfont{TeX Gyre Termes}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%A Few Useful Packages
+\usepackage{parskip}
+\usepackage{titlesec}    
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor={linkcolour!90}, linkcolor={linkcolour!90}}
+
+% line spacing
+\linespread{1.1}
+
+% section reformatting
+\titleformat{\section}{\color{black} \large}{}{0em}{}[\color{black}]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+
+\newcommand{\sectitle}[1]{
+    \vspace{1.5ex}
+    \section{#1}
+    \vspace{-3ex}
+    \noindent\rule{\textwidth}{0.7pt}
+    \vspace{-4ex}
+}
+
+% new text bold style
+\newsavebox\CBox
+\def\textBF#1{\sbox\CBox{#1}\resizebox{\wd\CBox}{\ht\CBox}{\textcolor{linkcolour}{{#1}}}}
+\parindent=0pt
+
+% dummy text
+\newcommand{\mylipsum}{Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,
+vestibulum ut, placerat ac, adipiscing vitae, felis.}
+
+%-------------------- Begin document ----------------------
+\begin{document}
+
+%-------------------- Title section ----------------------
+\begin{minipage}{\textwidth}
+    \vspace{7ex}
+        \par{
+        \centering
+        \vspace{-0.9in}
+            % \textcolor{black}{\emph{Curriculum Vitae}}\\
+            \textcolor{linkcolour}{\Large Gupta Anuj Kumar}
+        \par}
+\end{minipage}
+
+%-------------------- Header ----------------------
+\begin{center}
+    Phone: +919908992784 \,$\cdot$\, Email: guptnuj@gmail.com \,$\cdot$\, LinkedIn: \href{https://www.linkedin.com/in/mrakbg}{linkedin.com/in/mrakbg}
+\end{center}
+
+%%% Summary paragraph
+%%% Summary paragraph
+Dedicated and results-oriented professional with 2+ years of experience in DevOps tools. Proven track record of successfully achieving SLA performance. Possesses strong problem-solving and learning skills that contribute to adapting to new technologies.
+
+%-------------------- SECTIONS ----------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectitle{Education}
+
+\textBF{Bachelors of Technology, Computer Science} \\
+JNTUH, 2021
+
+\textBF{Intermediate, MPC} \\
+Gayatri Intermediate College, Hyderabad, 2017
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectitle{Experience}
+
+\textBF{Systems Engineer, Infosys Pvt Limited, Hyderabad}
+
+\begin{itemize}
+  \item Maintained Git workflows for version control (Source Code Management).
+  \item Developed and maintained automated CI/CD pipeline for code deployment using Jenkins with GCP.
+  \item Built Docker images and set up Jenkins to build and publish the images automatically.
+  \item Basic understanding of container orchestration platforms like Kubernetes.
+  \item Performed daily health checks, CPU and memory utilization, and pod monitoring.
+  \item Resolved day-to-day incidents within service SLA in ServiceNow (SNOW).
+\end{itemize}
+
+\textBF{Freelance Web Designer}
+
+\begin{itemize}
+  \item Built websites and performed marketing and SEO for more than 20+ startups.
+  \item Trained teams to manage their websites and online orders.
+  \item Designed websites using content management systems (CMS).
+  \item Created logos, wrote content, and generated graphics for websites from scratch to the ready state.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectitle{Certifications}
+
+\begin{itemize}
+  \item Python Certificate - Basics to Advanced
+    \item Digital Marketing Certificate - Google Ads and Online Sales
+  \item Infosys Certified Google Associate Cloud Engineer 
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectitle{Skills}
+
+\textBF{DevOps:}
+\begin{itemize}
+
+
+  \item Linux 
+  \item Git, Github
+  \item Jenkins, Terraform, Python
+  \item Grafana, Zabbix, ServiceNow
+  \item Docker, Kubernetes, Google Cloud Platform (GCP)
+ 
+
+\end{itemize}
+
+\end{document}
+
+
