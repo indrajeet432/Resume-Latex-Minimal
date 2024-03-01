@@ -1,0 +1,136 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[bottom=0.8in,top=0.8in, left=0.8in,right=0.8in]{geometry}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%%%%%%%%%%% pdflatex %%%%%%%%%
+\usepackage[T1]{fontenc}
+\usepackage{newtxmath,newtxtext}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%% xelatex %%%%%%%%%%%%%%
+% \usepackage{fontspec}
+% \setmainfont{Times New Roman}
+% \setmainfont{TeX Gyre Termes}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%A Few Useful Packages
+\usepackage{parskip}
+\usepackage{titlesec}    
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor={linkcolour!90}, linkcolor={linkcolour!90}}
+
+% line spacing
+\linespread{1.1}
+
+% section reformatting
+\titleformat{\section}{\color{black} \large}{}{0em}{}[\color{black}]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+
+\newcommand{\sectitle}[1]{
+    \vspace{1.5ex}
+    \section{#1}
+    \vspace{-3ex}
+    \noindent\rule{\textwidth}{0.7pt}
+    \vspace{-4ex}
+}
+
+% new text bold style
+\newsavebox\CBox
+\def\textBF#1{\sbox\CBox{#1}\resizebox{\wd\CBox}{\ht\CBox}{\textcolor{linkcolour}{{#1}}}}
+\parindent=0pt
+
+% dummy text
+\newcommand{\mylipsum}{Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,
+vestibulum ut, placerat ac, adipiscing vitae, felis.}
+
+%-------------------- Begin document ----------------------
+\begin{document}
+
+%-------------------- Title section ----------------------
+\begin{minipage}{\textwidth}
+    \vspace{7ex}
+        \par{
+        \centering
+        \vspace{-0.9in}
+            % \textcolor{black}{\emph{Curriculum Vitae}}\\
+            \textcolor{linkcolour}{\Large Gupta Anuj Kumar}
+        \par}
+\end{minipage}
+
+%-------------------- Header ----------------------
+\begin{center}
+    Phone: +919908992784 \,$\cdot$\, Email: guptnuj@gmail.com \,$\cdot$\, Place: Hyderabad
+    %\href{https://www.linkedin.com/in/mrakbg}%{linkedin.com/in/mrakbg}
+\end{center}
+
+%%% Summary paragraph
+%%% Summary paragraph
+I have designed, implemented and maintained scalable software solutions. My expertise includes automation, Jenkins, kubernetes, Shell, Python, Cloud computing and agile methodologies. I've successfully enhanced performance, security and reliability in multiple projects prioritizing user satisfaction.
+
+%-------------------- SECTIONS ----------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectitle{Education}
+
+\textBF{Bachelors of Technology, Computer Science} \\
+JNTUH, 2021
+
+\textBF{Intermediate, MPC} \\
+Gayatri Intermediate College, Hyderabad, 2017
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectitle{Experience - Systems Engineer, Infosys Private limited (2021 - Present)}
+
+ 
+\textBF{1. Liveperson}
+\begin{itemize}
+  \item Maintained Git workflows for version control (Source Code Management).
+  \item Developed and maintained automated CI/CD pipeline for code deployment using Jenkins with GCP.
+  \item Built Docker images and set up Jenkins to build and publish the images automatically.
+  \item Basic understanding of container orchestration platforms like Kubernetes.
+  \item Performed daily health checks, CPU and memory utilization, and pod monitoring.
+  \item Resolved day-to-day incidents within service SLA in ServiceNow (SNOW).
+\end{itemize}
+
+\textBF{2. Google Sunrise Project}
+
+\begin{itemize}
+  \item Managed Google Cloud Platform (GCP) instances and clusters for optimal performance.
+  \item Facilitated smooth project transfers between organizations, ensuring data integrity and minimal downtime.
+   \item Implemented DevOps principles to streamline operations, reducing deployment time by 20\%.
+   \item Assisted clients in transitioning to GCP and from GCP, improving scalability and cost-efficiency.
+\item Provided expert guidance and support to clients in navigating complex cloud solutions, resulting in increased efficiency and cost savings.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\sectitle{Certifications}
+
+\begin{itemize}
+    \item Infosys Certified Terraform Associate Engineer
+  \item Infosys Certified Google Associate Cloud Engineer 
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectitle{Tools \& Technologies}
+
+
+
+\begin{itemize}
+  \item Linux, Windows, Bash Scripting 
+  \item Git, Github, Jenkins
+  \item Ansible, Terraform, Docker, Kubernetes 
+  \item Grafana, Zabbix, Kibana, ServiceNow
+  \item AWS(Ec2, S3, Rds, Iam, Vpc, Route 53, Lambda)
+\end{itemize}
+
+\end{document}
+
+
+
