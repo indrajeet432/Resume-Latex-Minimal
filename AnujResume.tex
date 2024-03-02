@@ -1,0 +1,186 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[bottom=0.8in,top=0.8in, left=0.8in,right=0.8in]{geometry}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%%%%%%%%%%% pdflatex %%%%%%%%%
+\usepackage[T1]{fontenc}
+\usepackage{newtxmath,newtxtext}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%% xelatex %%%%%%%%%%%%%%
+% \usepackage{fontspec}
+% \setmainfont{Times New Roman}
+% \setmainfont{TeX Gyre Termes}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%A Few Useful Packages
+\usepackage{parskip}
+\usepackage{titlesec}    
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor={linkcolour!90}, linkcolor={linkcolour!90}}
+
+% line spacing
+\linespread{1.1}
+
+% section reformatting
+\titleformat{\section}{\color{black}\large}{}{0em}{}[\color{black}]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+
+\newcommand{\sectitle}[1]{
+    \vspace{1.5ex}
+    \section{#1}
+    \vspace{-3ex}
+    \noindent\rule{\textwidth}{0.7pt}
+    \vspace{-4ex}
+}
+
+% new text bold style
+\newsavebox\CBox
+\def\textBF#1{\sbox\CBox{#1}\resizebox{\wd\CBox}{\ht\CBox}{\textcolor{linkcolour}{{#1}}}}
+\parindent=0pt
+
+% dummy text
+\newcommand{\mylipsum}{Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,
+vestibulum ut, placerat ac, adipiscing vitae, felis.}
+
+%-------------------- Begin document ----------------------
+\begin{document}
+
+%-------------------- Title section ----------------------
+\begin{minipage}{\textwidth}
+    \vspace{7ex}
+        \par{
+        \centering
+        \vspace{-0.9in}
+            % \textcolor{black}{\emph{Curriculum Vitae}}\\
+            \textcolor{linkcolour}{\Large Gupta Anuj Kumar}
+        \par}
+\end{minipage}
+
+%-------------------- Personal Details ----------------------
+\begin{center}
+    Phone: +919908992784 \,$\cdot$\, Email: guptnuj@gmail.com \,$\cdot$\, Place: Hyderabad
+    %\href{https://www.linkedin.com/in/mrakbg}%{linkedin.com/in/mrakbg}
+\end{center}
+
+%%% Summary paragraph
+I am a results-oriented professional with experience in designing, implementing, and maintaining scalable software solutions. my expertise includes automation, Jenkins, Kubernetes, Shell scripting, Python, Cloud computing, and agile methodologies. i have a proven track record of enhancing performance, security, and reliability in multiple projects while prioritizing user satisfaction.
+
+%-------------------- SECTIONS ----------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectitle{Education}
+
+\textBF{Bachelors of Technology, Computer Science} \\
+Jawaharlal Nehru Technological University Hyderabad, 2021
+
+\textBF{Intermediate, MPC} \\
+Gayatri Intermediate College, Hyderabad, 2017
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectitle{Experience - Systems Engineer, Infosys Private Limited (2021 - Present)}
+
+\textBF{Liveperson}
+\begin{itemize}
+  \item Version Control: Maintained Git workflows for version control (Source Code Management).
+  \item CI/CD Pipeline: Developed and maintained automated CI/CD pipeline for code deployment using Jenkins with GCP.
+  \item Docker: Built Docker images and set up Jenkins to automate image building and publishing.
+  \item Kubernetes: Demonstrated basic understanding of container orchestration platforms like Kubernetes.
+  \item Monitoring: Conducted daily health checks, monitored CPU and memory utilization, and managed pod monitoring.
+  \item Incident Management: Resolved day-to-day incidents within service SLA using ServiceNow (SNOW).
+\end{itemize}
+
+\textBF{Google Sunrise Project}
+\begin{itemize}
+  \item Cloud Management: Managed Google Cloud Platform (GCP) instances and clusters for optimal performance.
+  \item Project Transfers: Facilitated seamless project transfers between organizations, ensuring data integrity and minimal downtime.
+  \item DevOps Implementation: Implemented DevOps principles to streamline operations, reducing deployment time by 20\%.
+  \item Client Support: Assisted clients in transitioning to and from GCP, enhancing scalability and cost-efficiency.
+  \item Consultation: Provided expert guidance and support to clients in navigating complex cloud solutions, resulting in increased efficiency and cost savings.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\sectitle{Certifications}
+
+\begin{itemize}
+    \item Terraform Associate Engineer (Infosys Certified)
+    \item Google Associate Cloud Engineer (Infosys Certified)
+    \item AWS Certified Solutions Architect – Associate
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectitle{Tools \& Technologies}
+
+\begin{itemize}
+  \item Operating Systems: Linux, Windows
+  \item Scripting: Bash Scripting 
+  \item Version Control: Git, GitHub
+  \item CI/CD: Jenkins
+  \item Configuration Management: Ansible
+  \item Infrastructure as Code: Terraform
+  \item Containers: Docker, Kubernetes 
+  \item Monitoring: Grafana, Zabbix, Kibana
+  \item Incident Management: ServiceNow
+  \item Cloud Platforms: AWS (EC2, S3, RDS, IAM, VPC, Route 53, Lambda), Google Cloud Platform (GCP)
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectitle{Personal Projects}
+
+\textBF{1. Automated Deployment Pipeline}
+\begin{itemize}
+    \item {Description:} Developed an automated deployment pipeline using Jenkins, Docker, and Kubernetes to streamline the release process. Integrated automated testing and monitoring for improved reliability. Reduced deployment time by 30% and increased deployment frequency by 50%.
+    \item {Technologies Used:} Jenkins, Docker, Kubernetes, Shell scripting, Git
+\end{itemize}
+
+\textBF{2. Infrastructure as Code with Terraform}
+\begin{itemize}
+    \item {Description:} Implemented infrastructure as code using Terraform to provision and manage cloud resources on AWS. Automated the creation of EC2 instances, S3 buckets, IAM roles, and VPCs, resulting in a 40% reduction in provisioning time and minimizing human errors.
+    \item {Technologies Used:} Terraform, AWS, Shell scripting
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectitle{Volunteer Experience}
+
+\begin{itemize}
+    \item Volunteered at local community center to teach computer literacy to underprivileged children.
+
+    \item Volunteered in my village for cleanliness drives and conducted typing classes for basic computer literacy using laptops
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectitle{Achievements}
+
+\begin{itemize}
+    \item Received "Best Performer of the Year" award for outstanding contributions to project success.
+    \item Recognized for achieving a 94.6\% uptime for critical production systems during a high-traffic event.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\sectitle{Social Media Profiles}
+
+%\begin{itemize}
+%    \item \textbf{GitHub:} \href{https://github.com/mrakbg}{github.com/Mrakbg}
+ %   \item \textbf{LinkedIn:} \href{https://www.linkedin.com/in/DevOpsAnuj}{linkedin.com/in/DevOpsAnuj}
+%\end{itemize}
+\sectitle{More Details}
+
+\begin{itemize}
+ \item {Total Experience:} 2 years 7 months
+    \item {Marrital Status:} Unmarried
+    \item {Languages known:} English, Telugu, Hindi
+    
+     \item {GitHub:} \href{https://github.com/mrakbg}{github.com/Mrakbg}
+    \item {LinkedIn:} \href{https://www.linkedin.com/in/DevOpsAnuj}{linkedin.com/in/DevOpsAnuj}
+\end{itemize}
+
+
+\end{document}
+
